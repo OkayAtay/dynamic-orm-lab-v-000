@@ -60,8 +60,6 @@ class InteractiveRecord
     found_value = DB[:conn].execute(sql)
     found_value.flatten
     end
-
-    binding.pry
   end
 
 end
