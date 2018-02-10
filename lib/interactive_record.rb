@@ -58,8 +58,7 @@ class InteractiveRecord
     attr.map do |key, value|
     sql = "SELECT * FROM #{self.table_name} WHERE #{key} = '#{value}'"
     found_value = DB[:conn].execute(sql)
-    binding.pry
-    found_value[0]
+    found_value
     end
   end
 
